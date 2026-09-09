@@ -12,6 +12,12 @@
   <strong>Medora</strong> is a state-of-the-art, high-yield medical MCQ platform engineered specifically for medical students preparing for <strong>MBBS University Professional Examinations</strong> and <strong>USMLE Step 1 / Step 2 CK</strong>.
 </p>
 
+<p align="center">
+  <a href="https://medora-gray.vercel.app/">🚀 Live Demo</a>
+  &nbsp;•&nbsp;
+  <a href="https://github.com/Yashfeen13/medora">💻 GitHub Repository</a>
+</p>
+
 ---
 
 ## 🌐 Live Demo
@@ -172,7 +178,7 @@ Medora/
 
 ### 2. Clone & Install
 ```bash
-git clone https://github.com/YOUR_USERNAME/medora.git
+git clone https://github.com/Yashfeen13/medora.git
 cd medora
 npm install
 ```
