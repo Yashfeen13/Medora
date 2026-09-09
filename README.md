@@ -82,82 +82,12 @@ Medora supports all 19 subjects of the modern MBBS medical curriculum:
 
 ---
 
+## 🌐 Live Demo & Deployment
+
+- **Live Platform**: [https://medora.vercel.app]((https://medora-gray.vercel.app/)) *(Replace with your actual Vercel link once deployed)*
+
+
+---
+
 ## 🛠️ Architecture & Tech Stack
-
-```mermaid
-graph TD;
-    User[Medical Student] --> UI[Next.js 16 App Router UI];
-    UI --> Pool[Local Daily Pool Engine];
-    Pool --> Dedup[Jaccard Deduplication & Fingerprinting];
-    Pool --> Matrix[2D Combinatorial Matrix - 100+ Stems];
-    Pool --> AI[Google Gemini AI API];
-    UI --> LocalStorage[Client Storage & Analytics];
-    UI --> Supabase[Supabase DB - Optional Cloud Sync];
-
-Frontend Framework: Next.js 16.3 (App Router with Turbopack)
-UI & Styling: React 19, Tailwind CSS v4, Lucide Icons
-Type Safety: TypeScript 5
-Deduplication Engine: Jaccard similarity & stem hashing (src/lib/daily-pool.ts)
-Procedural Engine: 2D Sub-Concept × Focus Angle Matrix (src/lib/fallback-questions.ts)
-Cloud Database (Optional): Supabase PostgreSQL (@supabase/supabase-js)
-Deployment Platform: Vercel
-📁 Directory Structure
-
-
-Medora/
-├── src/
-│   ├── app/
-│   │   ├── api/             # REST API routes (attempts, questions, progress, users)
-│   │   ├── dashboard/       # Main user analytics dashboard
-│   │   ├── practice/
-│   │   │   ├── mode/        # Exam selection (University vs USMLE)
-│   │   │   ├── topic/       # Topic picker with voice search
-│   │   │   └── quiz/        # Core MCQ quiz engine & mistake practice
-│   │   ├── progress/        # Comprehensive performance charts
-│   │   ├── questions/       # Question Bank & mistake review tab
-│   │   ├── subjects/        # 19 MBBS subjects grid
-│   │   └── page.tsx         # User onboarding landing page
-│   ├── components/
-│   │   ├── layout/          # Navbar, BottomNav, PageContainer
-│   │   ├── progress/        # Accuracy charts & streak indicators
-│   │   ├── quiz/            # QuestionCard, FeedbackPanel, TTSButton
-│   │   ├── subjects/        # SubjectCard, ModeCard, SpeechInput
-│   │   └── ui/              # StatCard, LoadingSkeleton, EmptyState
-│   └── lib/
-│       ├── constants.ts      # Curriculum knowledge base & constants
-│       ├── daily-pool.ts     # Deduplication & daily pool storage manager
-│       ├── fallback-questions.ts # 2D Combinatorial Question Generator
-│       ├── gemini.ts        # Google Gemini AI integration
-│       └── user.ts          # Storage & progress tracking utilities
-├── public/                  # Static assets & icons
-├── package.json
-└── README.md
-⚡ Quick Start Guide (Local Setup)
-1. Prerequisites
-Node.js: v18.0.0 or higher
-npm: v9.0.0 or higher
-2. Clone & Install
-bash
-
-
-git clone https://github.com/YOUR_USERNAME/medora.git
-cd medora
-npm install
-3. Run Development Server
-bash
-
-
-npm run dev
-Open http://localhost:3000 in your browser.
-
-🌐 Deploying to Vercel
-Push your code to a GitHub repository.
-Go to Vercel and click Add New... → Project.
-Import your medora repository.
-Set Project Name to medora (all lowercase).
-Click Deploy.
-Note: Medora runs 100% out of the box without requiring environment variables. Optional keys (e.g. GEMINI_API_KEY) can be added under Project Settings → Environment Variables.
-
-📜 License
-This project is released under the MIT License.
 
